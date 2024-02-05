@@ -1,0 +1,97 @@
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+section{
+    height: 100vh;
+    width: 100%;
+    background-image: url("./Images/remy_loz-3S0INpfREQc-unsplash.jpg");
+    background-size: cover;
+}
+.Side-Bar{
+    height:100vh;
+    width:250px;
+    display:flex;
+    flex-direction: column;
+    background-color: rgba(255,255,255,0.1);
+    box-shadow:0 0 6px rgba(255,255,255,0.5);
+    transform: translate(-253px, 0);
+    opacity: 0;
+    transition: 0.5s linear;
+}
+section #Toogler{
+    position: absolute;
+    visibility: hidden;
+}
+section .btn-one{
+    position: absolute;
+    left: 40px;
+    top:30px;
+    font-size: 2rem;
+    color:#fff
+}
+.btn-one i{
+    cursor: pointer;
+}
+#Toogler:checked ~ .btn-one{
+    visibility: hidden;
+}
+#Toogler:checked ~ .Side-Bar{
+    transform: translate(0, 0);
+    opacity: 1;
+
+}
+section .Side-Bar-Logo{
+    padding:20px 40px 20px 40px;
+    box-shadow: 0 0 5px rgba(255,255,255,0.5);
+    display:flex;
+}
+.Side-Bar-Logo .btn-two i{
+    align-self:flex-end;
+    position: absolute;
+    left:220px;
+    top:20px;
+    cursor:pointer;
+    font-size:2rem;
+}
+.Side-Bar-Logo a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:1.5rem;
+}
+.Side-Bar-Menu ul{
+    padding:20px 0 0 0;
+}
+.Side-Bar-Menu ul a{
+
+    text-decoration:none;
+}
+.Side-Bar-Menu ul li:hover{
+    box-shadow:0 0 5px rgba(255,255,255,0.5);
+    border-left:1px solid #fff;
+}
+.Side-Bar-Menu ul li{
+    list-style: none;
+    color:#fff;
+    padding:20px 20px 20px 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.Side-Bar-Menu ul a i{
+    padding:5px ;
+
+}
+.Social-Media{
+    position:absolute;
+    bottom:30px;
+    left:25px;
+}
+.Social-Media a{
+    padding:10px;
+    color:rgba(255,255,255, 0.6);
+    size:30px;
+}
+.Social-Media a:hover{
+    color:rgba(255,255,255, 1);
+}
